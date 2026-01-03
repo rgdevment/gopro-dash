@@ -79,7 +79,7 @@ find "$TARGET_DIR" -maxdepth 1 -type f -name "*_Master.mp4" -print0 | while IFS=
         --layout "xml" \
         --layout-xml "$LAYOUT_FILE" \
         --double-buffer \
-        --gps-speed-max 300 \
+        --gps-speed-max 200 \
         --font "$FONT_PATH" \
         --gpx "$GPX_FILE" \
         "$INPUT_VIDEO" \
