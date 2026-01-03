@@ -24,7 +24,7 @@ TARGET_DIR="$1"
 
 if [ -z "$TARGET_DIR" ]; then
     echo "❌ Error: Falta la carpeta de videos."
-    echo "Uso: ./auto-render.sh '/ruta/a/READY_MASTERS'"
+    echo "Uso: ./auto-render.sh '/ruta/a/READY'"
     exit 1
 fi
 
