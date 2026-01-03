@@ -1,0 +1,38 @@
+<layout>
+    <composite x="50" y="50" name="timestamp_widget">
+        <component type="datetime" x="0" y="0" format="%d/%m/%Y %H:%M:%S" size="28" rgb="255,255,255" outline="0,0,0" outline_width="2">
+             <cache />
+        </component>
+    </composite>
+
+    <composite x="50" y="1200" name="speed_cluster">
+        <component type="metric" metric="speed" units="kph" dp="0" size="100" align="left" rgb="255,255,255" outline="0,0,0" outline_width="3">
+            <cache />
+        </component>
+        <component type="text" x="5" y="100" size="24" rgb="255,255,0">KM/H</component>
+
+        <translate x="0" y="140">
+             <component type="text" x="0" y="0" size="20" rgb="200,200,200">DIST:</component>
+             <component type="metric" x="60" y="0" metric="odo" units="km" dp="1" size="20" rgb="255,255,255" />
+        </translate>
+
+        <translate x="0" y="170">
+             <component type="text" x="0" y="0" size="20" rgb="200,200,200">ALT:</component>
+             <component type="metric" x="60" y="0" metric="alt" dp="0" size="20" rgb="255,255,255" units="m" />
+        </translate>
+    </composite>
+
+    <translate x="2150" y="50">
+        <frame width="500" height="500" cr="20" outline="255,255,0" opacity="0.8" bg="0,0,0,50">
+            <component type="moving_map" x="0" y="0" size="500" zoom="16" />
+            <component type="journey_map" x="0" y="0" size="500" />
+        </frame>
+    </translate>
+
+    <translate x="2250" y="1150">
+        <composite name="compass_widget">
+             <component type="compass" size="250" bg="0,0,0,150" fg="255,255,255" text="255,255,0" textsize="24"/>
+        </composite>
+    </translate>
+
+</layout>
